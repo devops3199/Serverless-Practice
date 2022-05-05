@@ -16,7 +16,7 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_NOTE":
-      return { ...state, notes: [action.note, ...state.notes] };
+      return { ...state, notes: [...state.notes, action.note] };
     case "RESET_FORM":
       return { ...state, form: initialState.form };
     case "SET_INPUT":
